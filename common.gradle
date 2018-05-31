@@ -1,0 +1,24 @@
+ext {
+    android = [
+            applicationId    : "com.xiao.kotlinmall",
+            minSdkVersion    : 21,
+            targetSdkVersion : 27,
+            versionCode      : 1,
+            versionName      : "1.0",
+            compileSdkVersion: 27
+    ]
+
+    java = [
+            javaVersion: JavaVersion.VERSION_1_8
+    ]
+
+    dependencies = [
+
+            libAppCompatVersion       : 'com.android.support:appcompat-v7:27.1.1',
+            libDesignVersion          : 'com.android.support:design:24.2.1',
+            libOkHttpVersion          : 'com.squareup.okhttp3:okhttp:3.10.0',
+            libCommonLibrary          : ':commonLibrary',
+            libGsonVersion            : 'com.google.code.gson:gson:2.8.5',
+            libConstraintLayoutVersion: 'com.android.support.constraint:constraint-layout:1.1.0'
+    ]
+}
