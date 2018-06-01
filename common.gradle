@@ -1,3 +1,5 @@
+import kotlin.KotlinVersion
+
 ext {
     android = [
             applicationId    : "com.xiao.kotlinmall",
@@ -13,12 +15,15 @@ ext {
     ]
 
     dependencies = [
-
+            libKotlinVersion          : 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.2.41',
             libAppCompatVersion       : 'com.android.support:appcompat-v7:27.1.1',
             libDesignVersion          : 'com.android.support:design:24.2.1',
             libOkHttpVersion          : 'com.squareup.okhttp3:okhttp:3.10.0',
-            libCommonLibrary          : ':commonLibrary',
             libGsonVersion            : 'com.google.code.gson:gson:2.8.5',
-            libConstraintLayoutVersion: 'com.android.support.constraint:constraint-layout:1.1.0'
+            libConstraintLayoutVersion: 'com.android.support.constraint:constraint-layout:1.1.0',
+            libAnkoCommonVersion      : 'org.jetbrains.anko:anko-commons:0.10.5',
+            libAnkoDesignVersion      : 'org.jetbrains.anko:anko-design:0.10.5',
+            libRxKotlinVersion        : 'io.reactivex:rxkotlin:1.0.0',
+            libRxAndroidVersion       : 'io.reactivex:rxandroid:1.2.1'
     ]
 }

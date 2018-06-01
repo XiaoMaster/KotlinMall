@@ -1,4 +1,6 @@
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
@@ -23,9 +25,20 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api rootProject.ext.dependencies.libAnkoCommonVersion
+    api rootProject.ext.dependencies.libAnkoDesignVersion
 
-    implementation rootProject.ext.dependencies.libAppCompatVersion
+    api rootProject.ext.dependencies.libAppCompatVersion
+    api rootProject.ext.dependencies.libKotlinVersion
+    api rootProject.ext.dependencies.libConstraintLayoutVersion
+    api rootProject.ext.dependencies.libRxKotlinVersion
+    api rootProject.ext.dependencies.libRxAndroidVersion
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
+repositories {
+    mavenCentral()
+
 }
