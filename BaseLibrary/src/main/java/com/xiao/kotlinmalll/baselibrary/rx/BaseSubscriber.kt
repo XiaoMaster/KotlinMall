@@ -1,8 +1,15 @@
 package com.xiao.kotlinmalll.baselibrary.rx
 
-import rx.Observable
 import rx.Subscriber
 
-abstract class BaseSubscriber<T> : Subscriber<T>() {
+open class BaseSubscriber<T> : Subscriber<T>() {
 
+    override fun onNext(t: T) {
+    }
+
+    override fun onCompleted() {
+    }
+
+    override fun onError(e: Throwable?) {
+    }
 }
