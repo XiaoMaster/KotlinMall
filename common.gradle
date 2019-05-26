@@ -13,16 +13,24 @@ ext {
             javaVersion: JavaVersion.VERSION_1_8
     ]
 
+    okHttpVersion = '3.10.0'
+    retrofitVersion = '2.1.0'
     dependencies = [
-            libKotlinVersion          : 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.2.41',
-            libAppCompatVersion       : 'com.android.support:appcompat-v7:27.1.1',
-            libDesignVersion          : 'com.android.support:design:24.2.1',
-            libOkHttpVersion          : 'com.squareup.okhttp3:okhttp:3.10.0',
-            libGsonVersion            : 'com.google.code.gson:gson:2.8.5',
-            libConstraintLayoutVersion: 'com.android.support.constraint:constraint-layout:1.1.0',
-            libAnkoCommonVersion      : 'org.jetbrains.anko:anko-commons:0.10.5',
-            libAnkoDesignVersion      : 'org.jetbrains.anko:anko-design:0.10.5',
-            libRxKotlinVersion        : 'io.reactivex:rxkotlin:1.0.0',
-            libRxAndroidVersion       : 'io.reactivex:rxandroid:1.2.1'
+            libKotlinVersion               : 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.2.41',
+            libAppCompatVersion            : 'com.android.support:appcompat-v7:27.1.1',
+            libDesignVersion               : 'com.android.support:design:24.2.1',
+            libGsonVersion                 : 'com.google.code.gson:gson:2.8.5',
+            libConstraintLayoutVersion     : 'com.android.support.constraint:constraint-layout:1.1.0',
+            libAnkoCommonVersion           : 'org.jetbrains.anko:anko-commons:0.10.5',
+            libAnkoDesignVersion           : 'org.jetbrains.anko:anko-design:0.10.5',
+            libRxKotlinVersion             : 'io.reactivex:rxkotlin:1.0.0',
+            libRxAndroidVersion            : 'io.reactivex:rxandroid:1.2.1',
+
+            libOkHttpVersion               : "com.squareup.okhttp3:okhttp:$okHttpVersion",
+            libOkHttpLoggingInterceptor    : "com.squareup.okhttp3:logging-interceptor:$okHttpVersion",
+
+            libRetrofitVersion             : "com.squareup.retrofit2:retrofit:$retrofitVersion",
+            libRetrofitConverterGsonVersion: "com.squareup.retrofit2:converter-gson:$retrofitVersion",
+            libRetrofitRxjavaAdapterVersion: "com.squareup.retrofit2:adapter-rxjava:$retrofitVersion",
     ]
 }
