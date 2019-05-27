@@ -1,0 +1,24 @@
+ext {
+
+    applicationId = "com.gopaopao.mall.kotlinmall"
+
+    app_config = [
+            compileSdkVersion: 28,
+            minSdkVersion    : 19,
+            targetSdkVersion : 28,
+            versionCode      : 1,
+            versionName      : "1.0"
+    ]
+
+    android_support = "28.0.0"
+    constraint = "1.1.3"
+    butterknife = "10.1.0"
+
+    libs = [
+
+            appcompat            : "com.android.support:appcompat-v7:${android_support}",
+            butterknife          : "com.jakewharton:butterknife:${butterknife}",
+            butterknife_processor: "com.jakewharton:butterknife-compiler:${butterknife}",
+            constraint           : "com.android.support.constraint:constraint-layout:${constraint}"
+    ]
+}

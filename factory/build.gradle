@@ -1,11 +1,9 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
-
 android {
-
     compileSdkVersion rootProject.ext.app_config.compileSdkVersion
 
     defaultConfig {
@@ -13,10 +11,11 @@ android {
         targetSdkVersion rootProject.ext.app_config.targetSdkVersion
         versionCode rootProject.ext.app_config.versionCode
         versionName rootProject.ext.app_config.versionName
-        applicationId rootProject.ext.applicationId
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -24,25 +23,12 @@ android {
         }
     }
 
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation rootProject.ext.libs.appcompat
-    implementation rootProject.ext.libs.constraint
-
-    implementation project(':user')
-
-
-//    implementation rootProject.ext.libs.butterknife
-//    kapt rootProject.ext.libs.butterknife_processor
-
+     implementation project(":common")
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
