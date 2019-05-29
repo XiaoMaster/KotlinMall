@@ -14,11 +14,17 @@ ext {
     constraint = "1.1.3"
     butterknife = "10.1.0"
 
+    rxkotlin = "x.y.z"
+
+    rxandroid = "2.1.1"
+
     libs = [
 
             appcompat            : "com.android.support:appcompat-v7:${android_support}",
             butterknife          : "com.jakewharton:butterknife:${butterknife}",
             butterknife_processor: "com.jakewharton:butterknife-compiler:${butterknife}",
-            constraint           : "com.android.support.constraint:constraint-layout:${constraint}"
+            constraint           : "com.android.support.constraint:constraint-layout:${constraint}",
+            rxkotlin             : "io.reactivex.rxjava2:rxkotlin:${rxkotlin}",
+            rxandroid : "io.reactivex.rxjava2:rxandroid:${rxandroid}"
     ]
 }

@@ -28,12 +28,26 @@ android {
 
 }
 
+ext.rx_kotlin_version = '1.0.0'
+ext.rx_android_version ='1.2.1'
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation rootProject.ext.libs.appcompat
+//    implementation rootProject.ext.libs.rxkotlin
+//    implementation rootProject.ext.libs.rxandroid
+//    implementation 'io.reactivex.rxjava2:rxjava:2.x.x'
+
+// RxKotlin and RxAndroid
+    implementation "io.reactivex:rxkotlin:$rx_kotlin_version"
+    implementation "io.reactivex:rxandroid:${rx_android_version}"
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
 }
